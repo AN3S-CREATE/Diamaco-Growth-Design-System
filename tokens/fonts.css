@@ -1,0 +1,4 @@
+/* The site's own Google Fonts request (diamacogrowth.co.za, captured 2026-10-12). No font binaries are shipped.
+   Playfair Display: display headings only (700, 700 italic for the red accent words, 900 for the hero).
+   Inter: everything else (300 hero lead, 400–600 UI and body, 700–900 titles and numerals). */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap");

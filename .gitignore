@@ -1,0 +1,7 @@
+# Machine-specific preview server config (absolute local path)
+.claude/
+
+# OS / editor noise
+Thumbs.db
+.DS_Store
+*.swp

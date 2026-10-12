@@ -1,0 +1,26 @@
+/* Spacing, layout and radius. The site has no formal scale; these are the values it actually uses, in order. */
+:root{
+--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:20px;--space-6:24px;--space-7:28px;
+--space-8:32px;--space-9:40px;--space-10:48px;--space-11:64px;--space-12:72px;--space-13:80px;--space-14:120px;
+
+/* layout */
+--container:1200px;          /* .container max-width */
+--gutter:40px;               /* container side padding (24 ≤1024px, 20 ≤768px) */
+--section-y:120px;           /* .section */
+--section-y-sm:80px;         /* .section--sm, CTA banner */
+--section-header-gap:72px;   /* section header → content */
+--nav-height:120px;          /* fixed nav bar */
+--logo-nav:96px;             /* logo height in the nav */
+--logo-footer:88px;          /* logo height in the footer */
+
+/* radius — site :root */
+--radius-sm:4px;             /* buttons, inputs, pillars, social squares */
+--radius-md:8px;             /* cards, grids, image frames */
+--radius-lg:16px;            /* feature visuals, the audit card */
+--radius-ui:10px;            /* selection tiles, icon tiles, metric cards (audit tool) */
+--radius-full:999px;         /* live badge, dots, step circles */
+
+--control:48px;              /* minimum interactive height */
+}
+@media (max-width:1024px){:root{--gutter:24px}}
+@media (max-width:768px){:root{--gutter:20px;--section-y:72px}}

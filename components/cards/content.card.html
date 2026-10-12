@@ -1,0 +1,28 @@
+<!-- @dsCard group="Components" viewport="700x720" name="Insights & metrics" subtitle="BlogCard (tag, title, excerpt, meta), MetricCard (audit results)" -->
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{padding:24px}.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}.three{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const { BlogCard, MetricCard } = window.DIAMACOGROWTH_83a452;
+function Demo() {
+  return (
+    <>
+      <div className="two">
+        <BlogCard tag="Automation" title="5 Workflows Every South African Business Should Automate in 2025" excerpt="Discover the highest-impact processes to automate first — no technical expertise required." date="Sep 2025" readTime="6 min read" icon="layers" />
+        <BlogCard tag="Compliance" title="The Complete Checklist for Winning Your First Government Tender" excerpt="From compliance documents to proposal strategy — everything you need to compete and win." date="Jul 2025" readTime="10 min read" />
+      </div>
+      <div className="three">
+        <MetricCard emoji="⏱️" label="Recoverable hours" value="18–26" unit="hrs / wk" desc="Example estimate from team size and selected bottlenecks." />
+        <MetricCard emoji="💰" label="Admin cost" value="R14k" unit="/ mo" desc="Example figure — show how it's calculated." />
+        <MetricCard icon="activity" label="Automation score" value="62" unit="/ 100" desc="Example score." />
+      </div>
+    </>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script></body></html>

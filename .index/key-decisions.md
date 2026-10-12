@@ -1,0 +1,13 @@
+# Key decisions
+
+| Date | Decision | Rationale |
+|---|---|---|
+| 2026-10-12 | Build from the live site; push to a new claude.ai/design project "DIAMACO GROWTH" | User's choice (build from scratch, new project) |
+| 2026-10-12 | Keep the site's `:root` token names verbatim; add tokens only for values the site hard-codes | Traceability to the source |
+| 2026-10-12 | Class-based styling (`components.css`) instead of inline styles | Sweeps, sheens and underline draws need pseudo-elements |
+| 2026-10-12 | Small red text uses `--red-bright` (4.6:1) not `--red` (3.6:1) | WCAG AA for small text; documented in README |
+| 2026-10-12 | Grids use auto-fill/auto-fit + container queries | Components stay correct inside narrow specimen cards |
+| 2026-10-12 | Phone/WhatsApp numbers left as placeholders | POPIA minimisation; follows the 360 Vision Events precedent |
+| 2026-10-12 | No testimonial component | Site styles exist but no testimonials are published — avoid invented proof |
+| 2026-10-12 | Don't upload `_ds_bundle.js`; let claude.ai/design compile it | Matches existing projects; local shim is preview-only |
+| 2026-10-12 | Git: source of truth at github.com/AN3S-CREATE/Diamaco-Growth-Design-System (`main`). Commit the preview shim, `.preview/` and `.index/`; ignore `.claude/` | Clones can preview locally; `.index/` is shared context (CONTEXT-INDEX-001); launch.json has a machine path |

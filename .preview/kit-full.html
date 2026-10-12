@@ -1,0 +1,9 @@
+<!doctype html>
+<!-- Local preview harness (not uploaded): renders the UI kit in a tall iframe with the hero pinned to 800px so a full-page screenshot is meaningful. -->
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}iframe{display:block;width:1280px;border:0}</style></head><body>
+<script>
+var p = new URLSearchParams(location.search), h = p.get('h') || '7400', page = p.get('page') || 'home';
+var f = document.createElement('iframe'); f.style.height = h + 'px'; f.src = '../ui_kits/website/index.html#' + page;
+f.onload = function () { var s = f.contentDocument.createElement('style'); s.textContent = '.dg-hero{min-height:800px!important}.dg-nav--fixed{position:absolute!important}.dg-wa{position:absolute!important}'; f.contentDocument.head.appendChild(s); };
+document.body.appendChild(f);
+</script></body></html>

@@ -1,0 +1,28 @@
+<!-- @dsCard group="Components" viewport="700x580" name="Core" subtitle="Button (primary / ghost / sm / white / disabled), SectionLabel, Tag, LiveBadge, IconTile, Icon set, Divider" -->
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{padding:24px}.col{display:grid;gap:20px}.row{display:grid;grid-template-columns:64px 1fr;align-items:center;gap:12px}.items{display:flex;flex-wrap:wrap;align-items:center;gap:12px 14px}.lbl{font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--white-faint)}.red{display:flex;align-items:center;gap:16px;background:var(--red);padding:14px 18px;border-radius:var(--radius-sm);color:var(--white);font-size:.75rem}.dg-label{margin:0}</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const { Button, SectionLabel, Tag, LiveBadge, IconTile, Icon, ICON_NAMES, Divider } = window.DIAMACOGROWTH_83a452;
+function Row({ label, children, style }) { return <div className="row"><span className="lbl">{label}</span><div className="items" style={style}>{children}</div></div>; }
+function Demo() {
+  return (
+    <div className="col">
+      <Row label="Buttons"><Button arrow>Free AI growth audit</Button><Button variant="ghost">Book a strategy call</Button></Row>
+      <Row label="Small"><Button size="sm" arrow>Start a project</Button><Button disabled>Disabled</Button></Row>
+      <Row label="On red"><div className="red"><Button variant="white">Book a free consultation</Button><span>white: only on the red band</span></div></Row>
+      <Row label="Labels"><SectionLabel variant="hero">Business growth partners · South Africa</SectionLabel><SectionLabel>What we do</SectionLabel><Tag>Automation</Tag></Row>
+      <Row label="Badge"><LiveBadge>Interactive diagnostic engine</LiveBadge></Row>
+      <Row label="Tiles"><IconTile icon="layers" /><IconTile icon="message-square" /><IconTile emoji="⚡" /><IconTile emoji="🎯" /><IconTile emoji="🚚" active /><IconTile icon="users" size="lg" /></Row>
+      <Row label="Icons" style={{ color: 'var(--white-muted)', gap: '14px 18px' }}>{ICON_NAMES.map((n) => <Icon key={n} name={n} size={20} title={n} />)}</Row>
+      <Row label="Divider"><div style={{ flex: 1 }}><Divider /></div></Row>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script></body></html>
