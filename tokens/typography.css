@@ -1,0 +1,50 @@
+/* Two families: Playfair Display for display headings, Inter for everything else.
+   The brand move: a heavy serif headline whose last beat turns red and italic ("Serious <em>Growth.</em>"),
+   framed by tiny, widely tracked Inter caps. */
+:root{
+--font-display:"Playfair Display",Georgia,"Times New Roman",serif;
+--font-sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+
+--weight-light:300;--weight-regular:400;--weight-medium:500;--weight-semibold:600;--weight-bold:700;--weight-extrabold:800;--weight-black:900;
+
+/* sizes (site values) */
+--size-hero:clamp(3rem,6vw,5.5rem);       /* home hero h1, Playfair 900 */
+--size-section:clamp(2rem,3.5vw,3.2rem);  /* section h2 + page-hero h1, Playfair 700 */
+--size-cta:clamp(1.8rem,3vw,2.8rem);      /* CTA banner title, Playfair 700 */
+--size-detail:1.8rem;                     /* service detail h2, Playfair 700 */
+--size-ghost-num:4rem;                    /* "01" ghost numerals, Inter 900 */
+--size-stat:3rem;                         /* stat bar numerals, Inter 900 */
+--size-stat-sm:2.2rem;                    /* hero stats, Inter 800 */
+--size-lead:clamp(1rem,1.4vw,1.2rem);     /* hero lead, Inter 300 */
+--size-body:1rem;                         /* section subtitle */
+--size-card-title:1.05rem;                /* service tile title, Inter 700 */
+--size-sm:0.85rem;                        /* card copy, footer links */
+--size-xs:0.75rem;                        /* meta, footer bottom */
+--size-action:0.8rem;                     /* buttons, nav links */
+--size-label:0.7rem;                      /* section labels, stat labels */
+--size-micro:0.65rem;                     /* service numbers, blog tags */
+
+--leading-display:1.05;--leading-title:1.1;--leading-cta:1.15;--leading-snug:1.4;--leading-body:1.6;--leading-relaxed:1.8;
+
+--tracking-display:-0.02em;--tracking-numeral:-0.04em;
+--tracking-label:0.2em;--tracking-caps:0.15em;--tracking-nav:0.12em;--tracking-action:0.1em;
+
+--measure:560px;
+}
+
+/* ---- text styles (components use these classes) ---- */
+.dg-hero-title{font-family:var(--font-display);font-size:var(--size-hero);font-weight:var(--weight-black);line-height:var(--leading-display);letter-spacing:var(--tracking-display);color:var(--text-title);margin:0 0 28px}
+.dg-section-title{font-family:var(--font-display);font-size:var(--size-section);font-weight:var(--weight-bold);line-height:var(--leading-title);letter-spacing:var(--tracking-display);color:var(--text-title);margin:0 0 20px}
+.dg-cta-title{font-family:var(--font-display);font-size:var(--size-cta);font-weight:var(--weight-bold);line-height:var(--leading-cta);color:var(--white);margin:0;max-width:560px}
+.dg-detail-title{font-family:var(--font-display);font-size:var(--size-detail);font-weight:var(--weight-bold);line-height:1.2;letter-spacing:var(--tracking-display);color:var(--text-title);margin:0 0 16px}
+.dg-hero-title em,.dg-section-title em,.dg-detail-title em{color:var(--accent);font-style:italic}
+.dg-cta-title em{font-style:italic}
+
+.dg-lead{font-size:var(--size-lead);font-weight:var(--weight-light);line-height:var(--leading-relaxed);color:var(--text-body);max-width:var(--measure);margin:0}
+.dg-subtitle{font-size:var(--size-body);line-height:var(--leading-relaxed);color:var(--text-body);max-width:var(--measure);margin:0}
+.dg-body{font-size:var(--size-sm);line-height:1.7;color:var(--text-body);margin:0}
+.dg-card-title{font-size:var(--size-card-title);font-weight:var(--weight-bold);letter-spacing:-0.01em;line-height:1.35;color:var(--text-title);margin:0 0 10px}
+.dg-caps{font-size:var(--size-label);font-weight:var(--weight-medium);letter-spacing:var(--tracking-caps);text-transform:uppercase;color:var(--text-secondary)}
+.dg-numeral{font-size:var(--size-stat);font-weight:var(--weight-black);letter-spacing:var(--tracking-numeral);line-height:1;color:var(--text-title);font-variant-numeric:tabular-nums}
+.dg-numeral span{color:var(--accent)}
+.dg-ghost-num{font-size:var(--size-ghost-num);font-weight:var(--weight-black);letter-spacing:-0.05em;line-height:1;color:var(--black-border)}

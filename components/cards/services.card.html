@@ -1,0 +1,28 @@
+<!-- @dsCard group="Components" viewport="700x700" name="Services & stats" subtitle="ServiceGrid (hairline tiles, red underline on hover), StatsBar numerals and feature cells" -->
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{padding:24px}.gap{height:20px}.dg-services{grid-template-columns:repeat(3,1fr)}.dg-service{padding:28px 22px}.dg-stat{padding:28px 16px}</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const { ServiceGrid, StatsBar } = window.DIAMACOGROWTH_83a452;
+function Demo() {
+  return (
+    <>
+      <ServiceGrid limit={3} />
+      <div className="gap" />
+      <StatsBar items={[{ value: '10', label: 'Core services' }, { value: 'SA', label: 'Based & focused' }, { value: '∞', label: 'Growth potential' }]} />
+      <div className="gap" />
+      <StatsBar items={[
+        { emoji: '⚡', label: 'Fast implementation', text: 'We move quickly so you see results sooner' },
+        { emoji: '🎯', label: 'Results-focused', text: 'Every action is tied to a measurable outcome' },
+        { emoji: '🔒', label: 'No lock-in contracts', text: 'Earn your trust every month' },
+      ]} />
+    </>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script></body></html>

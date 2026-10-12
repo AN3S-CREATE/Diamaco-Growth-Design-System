@@ -1,0 +1,30 @@
+/* DIAMACO GROWTH — one dark theme ("black + signal red"). The first block is the live site's own :root, names kept verbatim.
+   The second block adds values the site hard-codes in component CSS. Semantic aliases follow. */
+:root{
+/* site :root (verbatim) */
+--black:#0a0a0a;--black-soft:#111111;--black-card:#141414;--black-border:#1e1e1e;
+--white:#ffffff;--white-muted:#cccccc;--white-faint:#888888;
+--red:#cc2222;--red-bright:#e63030;--red-glow:#cc22222e;--red-glow-sm:#cc22221a;
+
+/* hard-coded on the site, tokenised here */
+--black-deep:#080808;      /* footer, audit section, sunken bands */
+--black-input:#0c0c0c;     /* audit text inputs */
+--black-hover:#171717;     /* service tile / stat hover fill */
+--black-raised:#181818;    /* selection tile + pill hover fill */
+--black-line:#222222;      /* selection tiles, pills, metric cards */
+--black-line-hover:#383838;/* their hover border */
+--red-edge:#cc22224d;      /* 30% red — hovered card / pillar border */
+--red-line:#cc222259;      /* 35% red — live badge border */
+--red-tint:#cc22221f;      /* 12% red — live badge fill, active icon tile */
+--red-wash:#cc222214;      /* 8% red — active selection tile fill */
+--white-line:#ffffff33;    /* 20% white — ghost button border */
+--white-wash:#ffffff0d;    /* 5% white — ghost button hover fill */
+--whatsapp:#25d366;        /* floating WhatsApp button only */
+
+/* semantic aliases */
+--surface-page:var(--black);--surface-sunken:var(--black-deep);--surface-card:var(--black-card);--surface-soft:var(--black-soft);
+--text-title:var(--white);--text-body:var(--white-muted);--text-secondary:var(--white-faint);
+--accent:var(--red);--accent-hover:var(--red-bright);--accent-text-small:var(--red-bright);
+--border-hairline:var(--black-border);--border-accent:var(--red-edge);
+--focus:var(--red-bright);--on-accent:var(--white);
+}
