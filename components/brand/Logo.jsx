@@ -1,6 +1,6 @@
 import React from 'react';
 
-// GENERATED from assets/logos/diamaco-growth-logo.svg and diamaco-mark-red.svg — regenerate rather than hand-edit.
+// GENERATED from assets/logos/diamaco-growth-logo.svg and diamaco-mark-red.svg â€” regenerate rather than hand-edit.
 // Letters are Montserrat Bold / ExtraBold outlines; the slashed D is vectorised from the owner's rasters (see assets/logos/README.md).
 export const LOGO_ART = {
   viewBox: '0 0 1103.88 371.04',

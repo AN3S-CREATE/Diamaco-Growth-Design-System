@@ -3,8 +3,8 @@ usage: python -I gen_logo_jsx.py <repoRoot>"""
 import sys, os, re
 
 root = sys.argv[1]
-full = open(os.path.join(root, 'assets/logos/diamaco-growth-logo.svg')).read()
-mark = open(os.path.join(root, 'assets/logos/diamaco-mark-red.svg')).read()
+full = open(os.path.join(root, 'assets/logos/diamaco-growth-logo.svg'), encoding='utf-8').read()
+mark = open(os.path.join(root, 'assets/logos/diamaco-mark-red.svg'), encoding='utf-8').read()
 vb = re.search(r'viewBox="([^"]+)"', full).group(1)
 rect = re.search(r'<rect x="([^"]+)" y="([^"]+)" width="([^"]+)" height="([^"]+)"/>', full).groups()
 paths = re.findall(r'<path[^>]*d="([^"]+)"', full)
@@ -62,5 +62,5 @@ export function Logo({ variant = 'full', height, width, title = 'Diamaco Growth'
 }
 ''' % (vb, rect[0], rect[1], rect[2], rect[3], white_d, red_d, mvb, mark_d)
 os.makedirs(os.path.join(root, 'components/brand'), exist_ok=True)
-open(os.path.join(root, 'components/brand/Logo.jsx'), 'w', newline='\n').write(jsx)
+open(os.path.join(root, 'components/brand/Logo.jsx'), 'w', encoding='utf-8', newline='\n').write(jsx)
 print('Logo.jsx written', len(jsx), 'bytes; viewBox', vb, '| mark', mvb)

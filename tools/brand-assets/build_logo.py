@@ -249,16 +249,16 @@ def main(logo, mark, gjson, outdir):
     d_red = ''.join(cmds_to_d(cm, dx, dy) for cm in bot_cmds) + dmark.to_d(dmark.transform(dvec_logo, 1, 1, -dx, -dy))
     def body(cw, cr):
         return '<g fill="%s">%s<path d="%s"/></g>\n<path fill="%s" fill-rule="evenodd" d="%s"/>' % (cw, rect, d_white, cr, d_red)
-    open(os.path.join(outdir, 'diamaco-growth-logo.svg'), 'w').write(svg(W, H, body('#ffffff', RED)))
-    open(os.path.join(outdir, 'diamaco-growth-logo-mono-white.svg'), 'w').write(svg(W, H, body('#ffffff', '#ffffff')))
-    open(os.path.join(outdir, 'diamaco-growth-logo-mono-black.svg'), 'w').write(svg(W, H, body('#0a0a0a', '#0a0a0a')))
+    open(os.path.join(outdir, 'diamaco-growth-logo.svg'), 'w', encoding='utf-8').write(svg(W, H, body('#ffffff', RED)))
+    open(os.path.join(outdir, 'diamaco-growth-logo-mono-white.svg'), 'w', encoding='utf-8').write(svg(W, H, body('#ffffff', '#ffffff')))
+    open(os.path.join(outdir, 'diamaco-growth-logo-mono-black.svg'), 'w', encoding='utf-8').write(svg(W, H, body('#0a0a0a', '#0a0a0a')))
 
     # D-mark files (from the 512 trace directly)
     S = m.shape[1]
     MRED = RED
-    open(os.path.join(outdir, 'diamaco-mark.svg'), 'w').write(svg(S, S, '<rect width="%d" height="%d" fill="#000000"/>\n<path fill="%s" fill-rule="evenodd" d="%s"/>' % (S, S, MRED, dmark.to_d(dvec))))
+    open(os.path.join(outdir, 'diamaco-mark.svg'), 'w', encoding='utf-8').write(svg(S, S, '<rect width="%d" height="%d" fill="#000000"/>\n<path fill="%s" fill-rule="evenodd" d="%s"/>' % (S, S, MRED, dmark.to_d(dvec))))
     p2 = round(0.04 * (vy1 - vy0))
-    open(os.path.join(outdir, 'diamaco-mark-red.svg'), 'w').write(svg(vx1 - vx0 + 2 * p2, vy1 - vy0 + 2 * p2, '<path fill="%s" fill-rule="evenodd" d="%s"/>' % (MRED, dmark.to_d(dmark.transform(dvec, 1, 1, -(vx0 - p2), -(vy0 - p2))))))
+    open(os.path.join(outdir, 'diamaco-mark-red.svg'), 'w', encoding='utf-8').write(svg(vx1 - vx0 + 2 * p2, vy1 - vy0 + 2 * p2, '<path fill="%s" fill-rule="evenodd" d="%s"/>' % (MRED, dmark.to_d(dmark.transform(dvec, 1, 1, -(vx0 - p2), -(vy0 - p2))))))
     print('mark IoU %.4f (clean D vs 512 source)' % iou_layer(dmark.flatten(dvec), mred))
     print('viewBox %.1f x %.1f' % (W, H))
     for f in sorted(os.listdir(outdir)):
