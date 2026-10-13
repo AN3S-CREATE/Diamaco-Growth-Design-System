@@ -10,6 +10,13 @@ Contact). It is a black, single-accent site: page `#0a0a0a`, cards `#141414`, ha
 Playfair Display headlines whose last beat turns red and italic, Inter for everything else, and an interactive "AI Business
 Growth & Automation Audit" as the main lead magnet.
 
+## See it
+
+- **Showcase site:** https://an3s-create.github.io/Diamaco-Growth-Design-System/ (GitHub Pages from `main`): every card live,
+  the clickable website kit, logo downloads.
+- **Brand book:** `brandbook.html` (23 slides, 16:9) and its PDF export `exports/Diamaco-Growth-Brand-Book.pdf` — for
+  presenting or emailing.
+
 ## Sources
 
 - **Live site:** https://www.diamacogrowth.co.za — read on **2026-10-12**. Colour, radius and motion tokens are the site's own
@@ -56,6 +63,11 @@ Growth & Automation Audit" as the main lead magnet.
 | `assets/imagery/` | `about-partner.jpg` (896×1200), `og-image.jpg` (1200×630, the site's own) |
 | `thumbnail.html` | Homepage tile |
 | `SKILL.md` | Agent-skill entry point |
+| `index.html` | Client showcase page (GitHub Pages home): sections 01–08 with the live cards, icons, social graphics and website kit |
+| `brandbook.html` | 23-slide brand book (1600×900); `?p=N` renders one slide for export |
+| `exports/Diamaco-Growth-Brand-Book.pdf` | PDF of the brand book (slides rendered at 1.5×) |
+| `assets/showcase/` | Full-page captures of the website kit (home, services, audit, contact) used by the showcase and brand book |
+| `.nojekyll` | Lets GitHub Pages serve `_ds_bundle.js` (Jekyll would hide underscore files) |
 
 Each component has `<Name>.jsx`, `<Name>.d.ts` (props contract) and `<Name>.prompt.md` (usage); each folder has specimen
 `*.card.html` files. In cards and the compiled bundle the namespace is `window.DIAMACOGROWTH_83a452`.

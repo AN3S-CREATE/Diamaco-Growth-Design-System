@@ -13,3 +13,5 @@
 - [2026-10-13] Fix: `components/brand/Logo.jsx` held a cp1252 em dash (byte 0x97, invalid UTF-8) because the generator wrote
   without an encoding on Windows; flagged by the claude.ai/design migration check. Re-encoded to UTF-8; all text I/O in
   `tools/brand-assets/*.py` now sets `encoding='utf-8'`. Full repo scan: 0 invalid UTF-8 files.
+- [2026-10-13] Client showcase: `index.html`, `brandbook.html` (23 slides), `exports/Diamaco-Growth-Brand-Book.pdf`,
+  `assets/showcase/` captures, `.nojekyll`, `noindex` on kit pages; GitHub Pages enabled from `main`.
