@@ -10,3 +10,6 @@
 - [2026-10-13] Branch `feat/missing-assets`: vector logo + D-mark, 25 new icons + SVG exports, Logo/SocialPost, social kit +
   8 JPG exports, Alert/Toast/Modal/Accordion/TestimonialCard/StickyCtaBar, status colours, 3 new guideline cards; kit and
   specimens moved from emoji/PNG to icons/vector. All new/changed cards rendered in headless Chrome.
+- [2026-10-13] Fix: `components/brand/Logo.jsx` held a cp1252 em dash (byte 0x97, invalid UTF-8) because the generator wrote
+  without an encoding on Windows; flagged by the claude.ai/design migration check. Re-encoded to UTF-8; all text I/O in
+  `tools/brand-assets/*.py` now sets `encoding='utf-8'`. Full repo scan: 0 invalid UTF-8 files.

@@ -201,5 +201,5 @@ def bbox(contours):
 if __name__ == '__main__':
     img = cv2.imread(sys.argv[1])[..., :3]
     v = vectorize(red_mask(img))
-    open(sys.argv[2], 'w').write('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512"/><path fill="#ef212d" fill-rule="evenodd" d="%s"/></svg>' % to_d(v))
+    open(sys.argv[2], 'w', encoding='utf-8').write('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512"/><path fill="#ef212d" fill-rule="evenodd" d="%s"/></svg>' % to_d(v))
     print('contours', len(v), 'segments', sum(len(s) for s in v))
