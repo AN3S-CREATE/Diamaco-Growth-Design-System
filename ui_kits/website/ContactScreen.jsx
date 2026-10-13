@@ -6,6 +6,7 @@ import { Button } from '../../components/core/Button.jsx';
 import { Card } from '../../components/cards/Card.jsx';
 import { Icon } from '../../components/core/Icon.jsx';
 import { SERVICES } from '../../components/cards/ServiceGrid.jsx';
+import { Toast } from '../../components/feedback/Toast.jsx';
 
 // /contact: form on the left, contact details card on the right. Phone/WhatsApp are placeholders (confirm before use).
 export function ContactScreen() {
@@ -29,7 +30,8 @@ export function ContactScreen() {
               <FormRow><Field label="Email" type="email" placeholder="you@company.co.za" required /><Field label="Phone" type="tel" placeholder="+27 (0) 82 000 0000" /></FormRow>
               <Field label="Service of interest"><Select placeholder="Select a service" options={SERVICES.map((s) => s.title)} /></Field>
               <Field label="Message" type="textarea" placeholder="Tell us about your business and goals" />
-              <Button type="submit" block arrow>{sent ? 'Message sent — we’ll be in touch' : 'Send message'}</Button>
+              <Button type="submit" block arrow>Send message</Button>
+              {sent && <Toast onClose={() => setSent(false)}>Message sent — we'll be in touch.</Toast>}
             </form>
             <Card interactive={false} title="Contact details">
               <p className="dg-card__text" style={{ marginBottom: 12 }}>In person across Mpumalanga &amp; Gauteng; digitally in every other province.</p>

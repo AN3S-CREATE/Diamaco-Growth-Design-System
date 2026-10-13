@@ -1,12 +1,14 @@
 import React from 'react';
 import { PageHero } from '../../components/sections/PageHero.jsx';
 import { Marquee } from '../../components/sections/Marquee.jsx';
-import { Container } from '../../components/core/Container.jsx';
+import { Container, Section } from '../../components/core/Container.jsx';
 import { ServiceDetail } from '../../components/sections/ServiceDetail.jsx';
 import { SERVICES } from '../../components/cards/ServiceGrid.jsx';
+import { SectionHeading } from '../../components/sections/SectionHeading.jsx';
+import { Accordion } from '../../components/content/Accordion.jsx';
 import { CtaBanner } from '../../components/sections/CtaBanner.jsx';
 
-// /services: page hero, marquee, then all ten service rows alternating sides.
+// /services: page hero, marquee, all ten service rows alternating sides, FAQ, CTA band.
 export function ServicesScreen() {
   return (
     <>
@@ -19,6 +21,10 @@ export function ServicesScreen() {
           {SERVICES.map((s, i) => <ServiceDetail key={s.num} service={s} reverse={i % 2 === 1} />)}
         </Container>
       </section>
+      <Section tone="raised">
+        <SectionHeading align="center" label="FAQ" title={<>Questions, <em>Answered</em></>} />
+        <div style={{ maxWidth: 820, margin: '0 auto' }}><Accordion /></div>
+      </Section>
       <CtaBanner action={{ label: 'Book a free consultation', href: '#contact' }} />
     </>
   );

@@ -17,22 +17,22 @@ import { BlogCard } from '../../components/cards/BlogCard.jsx';
 import { AuditTool } from './AuditTool.jsx';
 
 // The live home page, top to bottom, with the site's own copy.
-export function HomeScreen({ photoSrc, go }) {
+export function HomeScreen({ photoSrc, go, onBook }) {
   return (
     <>
       <Hero
         eyebrow="Business growth partners · South Africa"
         title={<>Systems. Strategy.<br /><em>Serious Growth.</em></>}
         lead="Diamaco Growth helps South African businesses automate operations, build a powerful digital presence, and win more clients — with the hunger and focus that only a new company can bring."
-        actions={<><Button arrow onClick={() => go('audit')}>Free AI growth audit</Button><Button variant="ghost" onClick={() => go('contact')}>Book a strategy call</Button></>}
+        actions={<><Button arrow onClick={() => go('audit')}>Free AI growth audit</Button><Button variant="ghost" onClick={onBook}>Book a strategy call</Button></>}
         stats={[{ value: '10', label: 'Core services' }, { value: 'SA', label: 'Based & focused' }, { value: '∞', label: 'Growth potential' }]}
       />
       <Marquee />
       <StatsBar items={[
-        { emoji: '⚡', label: 'Fast implementation', text: 'We move quickly so you see results sooner' },
-        { emoji: '🎯', label: 'Results-focused', text: 'Every action is tied to a measurable outcome' },
-        { emoji: '🇿🇦', label: 'SA-market experts', text: 'Built for the South African business landscape' },
-        { emoji: '🔒', label: 'No lock-in contracts', text: 'Earn your trust every month — no lock-ins' },
+        { icon: 'zap', label: 'Fast implementation', text: 'We move quickly so you see results sooner' },
+        { icon: 'target', label: 'Results-focused', text: 'Every action is tied to a measurable outcome' },
+        { icon: 'map-pin', label: 'SA-market experts', text: 'Built for the South African business landscape' },
+        { icon: 'unlock', label: 'No lock-in contracts', text: 'Earn your trust every month — no lock-ins' },
       ]} />
 
       <Section>
@@ -75,10 +75,10 @@ export function HomeScreen({ photoSrc, go }) {
       <Section>
         <SectionHeading label="Why work with us" title={<>New to the Market.<br /><em>Not New to the Work.</em></>} subtitle="We’re breaking into the industry with something established firms rarely have anymore: genuine hunger. Every client gets our absolute best, every single time. No shortcuts, no junior handoffs, no coasting." />
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(420px, 1fr))', gap: 24 }}>
-          <Card emoji="🔥" title="Hungry to Prove Ourselves">Established agencies coast on reputation. We can't afford to. Every project we take on is a chance to earn our name.</Card>
-          <Card emoji="🎯" title="Your Results Are Our Reputation">We don't have a long client list to fall back on. Your success is the only portfolio we're building right now.</Card>
-          <Card emoji="💬" title="Radical Transparency, Always">No jargon, no smoke and mirrors. You'll always know exactly what we're building, why, and what it's costing.</Card>
-          <Card emoji="🔧" title="Execution Over Advice">We're not consultants who hand you a 40-page report and disappear. We roll up our sleeves and build — alongside you.</Card>
+          <Card icon="flame" title="Hungry to Prove Ourselves">Established agencies coast on reputation. We can't afford to. Every project we take on is a chance to earn our name.</Card>
+          <Card icon="target" title="Your Results Are Our Reputation">We don't have a long client list to fall back on. Your success is the only portfolio we're building right now.</Card>
+          <Card icon="message-circle" title="Radical Transparency, Always">No jargon, no smoke and mirrors. You'll always know exactly what we're building, why, and what it's costing.</Card>
+          <Card icon="tool" title="Execution Over Advice">We're not consultants who hand you a 40-page report and disappear. We roll up our sleeves and build — alongside you.</Card>
         </div>
         <div style={{ marginTop: 48, textAlign: 'center' }}>
           <Button arrow onClick={() => go('contact')}>Start a conversation</Button>

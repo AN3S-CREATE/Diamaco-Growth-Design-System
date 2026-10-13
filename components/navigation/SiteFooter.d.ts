@@ -6,7 +6,7 @@ export declare const FOOTER_BLURB: string;
  * Four-column footer on #080808 with square social buttons and a hairline copyright bar.
  */
 export interface SiteFooterProps extends React.HTMLAttributes<HTMLElement> {
-  /** Path to the logo PNG (88px tall). */
+  /** Optional image path (assets/logos/diamaco-growth-logo.svg). Without it the inline vector <Logo /> is used. */
   logoSrc?: string;
   /** Brand paragraph. Default FOOTER_BLURB. */
   blurb?: React.ReactNode;

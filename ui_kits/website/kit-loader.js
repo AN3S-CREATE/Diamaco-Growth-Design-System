@@ -5,9 +5,11 @@
   const C = '../../components/';
   const FILES = [
     'core/Icon', 'core/Button', 'core/SectionLabel', 'core/LiveBadge', 'core/Container', 'core/Divider', 'core/IconTile',
+    'brand/Logo',
     'cards/Card', 'cards/Pillars', 'cards/ServiceGrid', 'cards/StatsBar', 'cards/BlogCard', 'cards/MetricCard', 'cards/PhotoFrame',
     'forms/Field', 'forms/ChoiceCard', 'forms/PillGroup', 'forms/StepProgress',
-    'navigation/Breadcrumb', 'navigation/SiteNav', 'navigation/SiteFooter', 'navigation/WhatsAppButton',
+    'feedback/Alert', 'feedback/Toast', 'feedback/Modal', 'content/Accordion', 'content/TestimonialCard',
+    'navigation/Breadcrumb', 'navigation/SiteNav', 'navigation/SiteFooter', 'navigation/WhatsAppButton', 'navigation/StickyCtaBar',
     'sections/SectionHeading', 'sections/Hero', 'sections/PageHero', 'sections/Marquee', 'sections/ProcessSteps', 'sections/CtaBanner', 'sections/ServiceDetail',
   ].map((f) => C + f + '.jsx').concat(['AuditTool', 'HomeScreen', 'ServicesScreen', 'AuditScreen', 'ContactScreen', 'WebsiteApp'].map((f) => f + '.jsx'));
   const DS = (window.DS = window.DS || {});

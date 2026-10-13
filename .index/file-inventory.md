@@ -18,11 +18,20 @@ Status: Active · Generated · Local-only (not uploaded to claude.ai/design).
 | `components/core/*` | Icon (+ICONS, ICON_NAMES), Button, SectionLabel (+Tag), LiveBadge, Container (+Section), Divider, IconTile — each `.jsx/.d.ts/.prompt.md`; `core.card.html` | — | Active |
 | `components/cards/*` | Card, Pillars (+Pillar), ServiceGrid (+ServiceTile, SERVICES), StatsBar, BlogCard, MetricCard, PhotoFrame; `cards/services/content.card.html` | `SERVICES` (10 services, site copy) | Active |
 | `components/forms/*` | Field (+Input, Select, Textarea, FormRow), ChoiceCard (+ChoiceGrid), PillGroup (+Pill), StepProgress; `forms.card.html` | — | Active |
-| `components/navigation/*` | SiteNav (+NAV_LINKS), SiteFooter (+FOOTER_BLURB), WhatsAppButton, Breadcrumb; `navigation/footer.card.html` | — | Active |
+| `components/navigation/*` | SiteNav (+NAV_LINKS), SiteFooter (+FOOTER_BLURB), WhatsAppButton (`lifted`), StickyCtaBar, Breadcrumb; `navigation/footer.card.html` | — | Active |
+| `components/brand/Logo.jsx` | Inline vector logo; **generated** from `assets/logos/*.svg` by `tools/brand-assets/gen_logo_jsx.py` | `LOGO_ART`, `MARK_ART`, `Logo` | Generated |
+| `tools/brand-assets/*` | Generators: glyph extraction (glyphs.html + save_server.py), glyphmatch, build_logo + dmark, gen_logo_jsx, export_icons, to_jpg; README. Git only | — | Active (tooling) |
+| `components/brand/SocialPost.jsx` + `brand.card.html` | Social/blog artboards (4 formats × 4 variants); Logo specimen card | `SOCIAL_FORMATS` | Active |
+| `components/feedback/*` | Alert, Toast, Modal + `feedback.card.html` (added 2026-10-13) | — | Active |
+| `components/content/*` | Accordion (+FAQS), TestimonialCard + `faq.card.html` (added 2026-10-13) | `FAQS` | Active |
+| `ui_kits/social/*` | `index.html` gallery, `render.html` export page, `posts.jsx` (POSTS), `SocialGallery.jsx`, `kit-loader.js`, README | `POSTS`, `SocialRender` | Active |
+| `assets/icons/*.svg` | 45 line icons exported from `Icon.jsx` (`export_icons.js`, scratchpad) | — | Generated |
+| `assets/social/*.jpg` | 8 exported artboards (share image, 3 blog covers, 2 square, 1 portrait, 1 story) | — | Generated |
+| `assets/logos/*.svg` + README | Vector logo (full / mono-white / mono-black) and D-mark (tile / red); method + usage | — | Active |
 | `components/sections/*` | SectionHeading, Hero, PageHero, Marquee (+MARQUEE_ITEMS), ProcessSteps (+PROCESS), CtaBanner, ServiceDetail; `hero/sections/pages.card.html` | — | Active |
-| `guidelines/*.html` | 15 foundation cards: brand-logo/mark/voice/imagery, colors-blacks/red/text, type-display/ui/numerals, spacing-scale, radii, effects-depth/backgrounds, motion | `@dsCard` markers | Active |
+| `guidelines/*.html` | 17 foundation cards: brand-logo/mark/voice/imagery/icons, colors-blacks/red/text/status, type-display/ui/numerals, spacing-scale, radii, effects-depth/backgrounds, motion | `@dsCard` markers | Active |
 | `ui_kits/website/*` | Click-through site: `index.html`, `kit-loader.js`, `WebsiteApp`, `HomeScreen`, `ServicesScreen`, `AuditScreen`, `AuditTool`, `ContactScreen`, README | `window.DS` | Active |
-| `assets/logos/*` | `diamaco-growth-logo.png`, `diamaco-mark.svg` (raster in SVG), `diamaco-mark-512.png` — downloaded from the site 2026-10-12 | — | Active |
+| `assets/logos/*.png` | Site downloads (`diamaco-growth-logo.png`, `diamaco-mark-512.png`) + owner-supplied rasters (`Diamaco_Growth_Master.png`, `Diamaco_Growth_Transparent_Full.png` = duplicate of the site logo, `07_Diamaco_Iconic_D_Supersampled_1080x1080.png`) | — | Active (sources) |
 | `assets/imagery/*` | `about-partner.jpg`, `og-image.jpg` — downloaded from the site 2026-10-12 | — | Active |
 | `_ds_bundle.js` | Local preview shim: sync-loads component JSX via Babel into `window.DIAMACOGROWTH_83a452` | — | Local-only |
 | `.claude/launch.json` | `ds-preview` static server (python http.server :8765); git-ignored (absolute path) | — | Local-only |
