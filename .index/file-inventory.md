@@ -33,6 +33,12 @@ Status: Active · Generated · Local-only (not uploaded to claude.ai/design).
 | `ui_kits/website/*` | Click-through site: `index.html`, `kit-loader.js`, `WebsiteApp`, `HomeScreen`, `ServicesScreen`, `AuditScreen`, `AuditTool`, `ContactScreen`, README | `window.DS` | Active |
 | `assets/logos/*.png` | Site downloads (`diamaco-growth-logo.png`, `diamaco-mark-512.png`) + owner-supplied rasters (`Diamaco_Growth_Master.png`, `Diamaco_Growth_Transparent_Full.png` = duplicate of the site logo, `07_Diamaco_Iconic_D_Supersampled_1080x1080.png`) | — | Active (sources) |
 | `assets/imagery/*` | `about-partner.jpg`, `og-image.jpg` — downloaded from the site 2026-10-12 | — | Active |
+| `index.html` | Client showcase (GitHub Pages home): cover + sections 01–08 embedding live cards (scaled iframes), icon grid, social JPGs, website kit iframe + captures | — | Active |
+| `brandbook.html` | 23 × 1600×900 slides; JS fits cards/bodies; `?p=N` = single slide for export | — | Active |
+| `exports/Diamaco-Growth-Brand-Book.pdf` | Brand-book PDF (slides at 1.5×, assembled with PIL) | — | Generated |
+| `assets/showcase/*.jpg` | Website-kit full-page captures, sliced (home ×4, services ×4, audit, contact) | — | Generated |
+| `.nojekyll` | GitHub Pages: serve underscore files (`_ds_bundle.js`) | — | Active |
+| `.preview/pdf-pages.html` | Local harness: renders a PDF's pages with pdf.js for checking | — | Local-only |
 | `_ds_bundle.js` | Local preview shim: sync-loads component JSX via Babel into `window.DIAMACOGROWTH_83a452` | — | Local-only |
 | `.claude/launch.json` | `ds-preview` static server (python http.server :8765); git-ignored (absolute path) | — | Local-only |
 | `.gitignore` | Ignores `.claude/` and OS/editor noise | — | Active |

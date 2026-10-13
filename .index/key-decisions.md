@@ -16,4 +16,6 @@
 | 2026-10-13 | Add status colours (success/warning/info; danger = red-bright) for Alert/Toast only | Site has none; needed for real forms; kept out of decoration |
 | 2026-10-13 | `--logo-nav`/`--logo-footer` → 46/42px (vector, tight viewBox) | Same visual size as the site's padded 96/88px PNG |
 | 2026-10-13 | Social graphics as `SocialPost` artboards + JPG exports; copy only from site statements | Reusable templates; no invented claims |
+| 2026-10-13 | Client delivery = GitHub Pages showcase (`index.html`) + brand-book PDF (user's choice). PDF built from 16:9 slides rendered to images, not Chrome print | Chrome print of the long page broke layout (collapsed grids, mis-scaled iframes, stray pages); fixed-size slides render predictably |
+| 2026-10-13 | `noindex` on showcase and kit pages | Keep the site recreation out of search results next to the client's real site |
 | 2026-10-12 | Git: source of truth at github.com/AN3S-CREATE/Diamaco-Growth-Design-System (`main`). Commit the preview shim, `.preview/` and `.index/`; ignore `.claude/` | Clones can preview locally; `.index/` is shared context (CONTEXT-INDEX-001); launch.json has a machine path |

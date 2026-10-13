@@ -1,0 +1,20 @@
+<!doctype html>
+<!-- Local preview harness (not uploaded): renders a PDF's pages as a thumbnail sheet with pdf.js. ?f=<path>&from=1&to=24&w=320 -->
+<html><head><meta charset="utf-8"><style>body{margin:0;padding:10px;background:#555;font:11px sans-serif;color:#fff}#g{display:flex;flex-wrap:wrap;gap:8px}.p{display:flex;flex-direction:column;gap:2px}canvas{display:block;background:#fff}</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script></head>
+<body><div id="g"></div><script>
+(async function () {
+  var q = new URLSearchParams(location.search);
+  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+  var doc = await pdfjsLib.getDocument(q.get('f')).promise;
+  var from = +(q.get('from') || 1), to = Math.min(doc.numPages, +(q.get('to') || doc.numPages)), w = +(q.get('w') || 320);
+  for (var i = from; i <= to; i++) {
+    var page = await doc.getPage(i), vp = page.getViewport({ scale: 1 }), s = w / vp.width, v = page.getViewport({ scale: s });
+    var c = document.createElement('canvas'); c.width = v.width; c.height = v.height;
+    var d = document.createElement('div'); d.className = 'p'; d.appendChild(c); d.appendChild(document.createTextNode('p' + i + ' / ' + doc.numPages));
+    document.getElementById('g').appendChild(d);
+    await page.render({ canvasContext: c.getContext('2d'), viewport: v }).promise;
+  }
+  document.title = 'done';
+})();
+</script></body></html>
