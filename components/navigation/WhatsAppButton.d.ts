@@ -11,5 +11,7 @@ export interface WhatsAppButtonProps extends React.AnchorHTMLAttributes<HTMLAnch
   inline?: boolean;
   /** Pulsing ring. Default true. */
   pulse?: boolean;
+  /** Raise to bottom 96px while the StickyCtaBar is showing. */
+  lifted?: boolean;
 }
 export declare function WhatsAppButton(props: WhatsAppButtonProps): React.ReactElement;

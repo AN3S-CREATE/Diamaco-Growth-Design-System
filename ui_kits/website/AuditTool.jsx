@@ -6,23 +6,23 @@ import { MetricCard } from '../../components/cards/MetricCard.jsx';
 import { Button } from '../../components/core/Button.jsx';
 
 export const INDUSTRIES = [
-  { value: 'pro', emoji: '💼', title: 'Professional & Advisory', desc: 'Accounting, Legal, Consulting, Finance' },
-  { value: 'logistics', emoji: '🚚', title: 'Logistics & Fleet', desc: 'Transport, Courier, Supply Chain, Warehousing' },
-  { value: 'construction', emoji: '🏗️', title: 'Construction & Mining', desc: 'Contractors, Engineering, Industrial Supply' },
-  { value: 'retail', emoji: '🛍️', title: 'Retail & E-Commerce', desc: 'Wholesale, B2C/B2B Storefronts, Merchandising' },
-  { value: 'health', emoji: '🏥', title: 'Healthcare & Wellness', desc: 'Medical Practices, Clinics, Allied Health' },
-  { value: 'agency', emoji: '⚡', title: 'Creative & Tech Agency', desc: 'Marketing, Software, Design, Media' },
-  { value: 'manufacturing', emoji: '🏭', title: 'Manufacturing & Industrial', desc: 'Production, Fabricators, Heavy Machinery' },
-  { value: 'other', emoji: '🏢', title: 'Other Growing SME', desc: 'Commercial Services & Emerging Ventures' },
+  { value: 'pro', icon: 'briefcase', title: 'Professional & Advisory', desc: 'Accounting, Legal, Consulting, Finance' },
+  { value: 'logistics', icon: 'truck', title: 'Logistics & Fleet', desc: 'Transport, Courier, Supply Chain, Warehousing' },
+  { value: 'construction', icon: 'hard-hat', title: 'Construction & Mining', desc: 'Contractors, Engineering, Industrial Supply' },
+  { value: 'retail', icon: 'shopping-bag', title: 'Retail & E-Commerce', desc: 'Wholesale, B2C/B2B Storefronts, Merchandising' },
+  { value: 'health', icon: 'heart', title: 'Healthcare & Wellness', desc: 'Medical Practices, Clinics, Allied Health' },
+  { value: 'agency', icon: 'pen-tool', title: 'Creative & Tech Agency', desc: 'Marketing, Software, Design, Media' },
+  { value: 'manufacturing', icon: 'factory', title: 'Manufacturing & Industrial', desc: 'Production, Fabricators, Heavy Machinery' },
+  { value: 'other', icon: 'building', title: 'Other Growing SME', desc: 'Commercial Services & Emerging Ventures' },
 ];
 const TEAM = ['1 (Solo Founder)', '2 – 5 Staff', '6 – 15 Staff', '16 – 50 Staff', '50+ Enterprise'];
 const REVENUE = ['Under R100k / mo', 'R100k – R350k / mo', 'R350k – R1M / mo', 'R1M – R3M / mo', 'R3M+ / mo'];
 // Step 2 is a kit stand-in (the live tool asks about bottlenecks and current software; its exact options weren't captured).
 const BOTTLENECKS = [
-  { value: 'followup', emoji: '📞', title: 'Lead follow-up', desc: 'Enquiries go cold before anyone replies' },
-  { value: 'admin', emoji: '🧾', title: 'Quotes & invoicing', desc: 'Manual documents, re-typed data' },
-  { value: 'whatsapp', emoji: '💬', title: 'WhatsApp overload', desc: 'Same questions answered all day' },
-  { value: 'reporting', emoji: '📊', title: 'Reporting', desc: 'Numbers pulled together by hand' },
+  { value: 'followup', icon: 'phone', title: 'Lead follow-up', desc: 'Enquiries go cold before anyone replies' },
+  { value: 'admin', icon: 'file', title: 'Quotes & invoicing', desc: 'Manual documents, re-typed data' },
+  { value: 'whatsapp', icon: 'message-circle', title: 'WhatsApp overload', desc: 'Same questions answered all day' },
+  { value: 'reporting', icon: 'bar-chart', title: 'Reporting', desc: 'Numbers pulled together by hand' },
 ];
 
 function Q({ n, children }) {
@@ -62,8 +62,8 @@ export function AuditTool({ onBook }) {
           <>
             <span className="dg-label">Example output · illustrative figures</span>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 14 }}>
-              <MetricCard emoji="⏱️" label="Recoverable hours" value="18–26" unit="hrs / week" desc="Estimated from team size and the bottleneck you chose." />
-              <MetricCard emoji="⚙️" label="Automatable tasks" value="6" unit="workflows" desc="Processes that fit Zapier, Make or n8n builds." />
+              <MetricCard icon="clock" label="Recoverable hours" value="18–26" unit="hrs / week" desc="Estimated from team size and the bottleneck you chose." />
+              <MetricCard icon="refresh-cw" label="Automatable tasks" value="6" unit="workflows" desc="Processes that fit Zapier, Make or n8n builds." />
               <MetricCard icon="activity" label="Readiness score" value="62" unit="/ 100" desc="Higher = quicker wins from automation." />
             </div>
           </>

@@ -20,6 +20,11 @@
 --white-line:#ffffff33;    /* 20% white — ghost button border */
 --white-wash:#ffffff0d;    /* 5% white — ghost button hover fill */
 --whatsapp:#25d366;        /* floating WhatsApp button only */
+--logo-red:#ef212d;        /* the logo artwork's own red (sampled) — logo/mark only, never UI */
+
+/* status — added 2026-10-13 (the site has none). Small doses only: alerts, toasts, inline messages. */
+--success:#34b37a;--warning:#e6a23c;--info:#7c9cc4;--danger:var(--red-bright);
+--success-tint:#34b37a1f;--warning-tint:#e6a23c1f;--info-tint:#7c9cc41f;--danger-tint:#e630301f;
 
 /* semantic aliases */
 --surface-page:var(--black);--surface-sunken:var(--black-deep);--surface-card:var(--black-card);--surface-soft:var(--black-soft);

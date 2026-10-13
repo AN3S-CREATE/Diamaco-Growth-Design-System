@@ -1,5 +1,6 @@
 import React from 'react';
 import { Icon } from '../core/Icon.jsx';
+import { Logo } from '../brand/Logo.jsx';
 
 function cx(...a) { return a.filter(Boolean).join(' '); }
 
@@ -16,14 +17,14 @@ const DEFAULT_SOCIAL = [
   { icon: 'whatsapp', label: 'WhatsApp', href: 'https://wa.me/27000000000' },
 ];
 
-// #080808 footer: brand column (88px logo, blurb, square social buttons) + three link columns, then a hairline bottom bar.
+// #080808 footer: brand column (vector logo, blurb, square social buttons) + three link columns, then a hairline bottom bar.
 export function SiteFooter({ logoSrc, blurb = FOOTER_BLURB, columns = DEFAULT_COLUMNS, social = DEFAULT_SOCIAL, year = new Date().getFullYear(), credit = 'Designed & Built with ♥ in South Africa', className, ...rest }) {
   return (
     <footer {...rest} className={cx('dg-footer', className)}>
       <div className="dg-container">
         <div className="dg-footer__top">
           <div>
-            {logoSrc && <img className="dg-footer__logo" src={logoSrc} alt="Diamaco Growth" />}
+            {logoSrc ? <img className="dg-footer__logo" src={logoSrc} alt="Diamaco Growth" /> : <Logo className="dg-footer__logo" />}
             <p className="dg-footer__text">{blurb}</p>
             <div className="dg-footer__social">
               {social.map((s) => <a key={s.label} href={s.href} aria-label={s.label} target="_blank" rel="noopener noreferrer"><Icon name={s.icon} /></a>)}

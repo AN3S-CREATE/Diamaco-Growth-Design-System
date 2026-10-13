@@ -1,6 +1,10 @@
 # Machine-specific preview server config (absolute local path)
 .claude/
 
+# Regenerable Montserrat outline data (tools/brand-assets step 1)
+tools/brand-assets/glyphs.json
+__pycache__/
+
 # OS / editor noise
 Thumbs.db
 .DS_Store

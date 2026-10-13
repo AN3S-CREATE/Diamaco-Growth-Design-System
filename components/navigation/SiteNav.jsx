@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '../core/Button.jsx';
+import { Logo } from '../brand/Logo.jsx';
 
 function cx(...a) { return a.filter(Boolean).join(' '); }
 
@@ -12,7 +13,7 @@ export const NAV_LINKS = [
   { label: 'Contact', href: '/contact' },
 ];
 
-// The site's fixed top bar: 120px tall, 96px logo, caps links with a red underline that draws in from the left,
+// The site's fixed top bar: 120px tall, vector logo (inline unless logoSrc is given), caps links with a red underline that draws in from the left,
 // small red CTA on the right. Transparent over the hero; `solid` is the scrolled state (92% black + hairline).
 export function SiteNav({ logoSrc, links = NAV_LINKS, active, cta = { label: 'Start a project', href: '/contact' }, fixed = false, solid = false, compact = false, onNavigate, className, ...rest }) {
   const go = (href) => (e) => { if (onNavigate) { e.preventDefault(); onNavigate(href); } };
@@ -20,7 +21,7 @@ export function SiteNav({ logoSrc, links = NAV_LINKS, active, cta = { label: 'St
     <nav {...rest} className={cx('dg-nav', fixed && 'dg-nav--fixed', solid && 'dg-nav--solid', compact && 'dg-nav--compact', className)} aria-label="Main">
       <div className="dg-nav__inner">
         <a className="dg-nav__logo" href="/" onClick={go('/')}>
-          {logoSrc ? <img src={logoSrc} alt="Diamaco Growth" /> : <span className="dg-caps" style={{ color: 'var(--white)' }}>Diamaco Growth</span>}
+          {logoSrc ? <img src={logoSrc} alt="Diamaco Growth" /> : <Logo />}
         </a>
         <ul className="dg-nav__links">
           {links.map((l) => {

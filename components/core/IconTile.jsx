@@ -12,7 +12,7 @@ export function IconTile({ icon, emoji, size = 'default', active = false, label,
       className={cx('dg-icon-tile', size === 'lg' && 'dg-icon-tile--lg', active && 'is-active', className)}
       role={label ? 'img' : undefined} aria-label={label} aria-hidden={label ? undefined : true}
     >
-      {icon ? <Icon name={icon} /> : emoji}
+      {icon ? <Icon name={icon} /> : <span className="dg-icon-tile__emoji">{emoji}</span>}
     </span>
   );
 }

@@ -6,3 +6,7 @@
   plan_83a4521624474a7d_5a74ebf39eee. `_ds_bundle.js` / `_ds_manifest.json` not yet generated at push time — they appear
   after the app's self-check; then confirm `namespace` = `DIAMACOGROWTH_83a452` (cards depend on it).
 - [2026-10-12] Initialised git on top of the GitHub repo's initial commit; added `.gitignore`; committed the full system.
+  Note: three owner-supplied PNGs in `assets/logos/` were included in that commit unreviewed (reported to the user).
+- [2026-10-13] Branch `feat/missing-assets`: vector logo + D-mark, 25 new icons + SVG exports, Logo/SocialPost, social kit +
+  8 JPG exports, Alert/Toast/Modal/Accordion/TestimonialCard/StickyCtaBar, status colours, 3 new guideline cards; kit and
+  specimens moved from emoji/PNG to icons/vector. All new/changed cards rendered in headless Chrome.

@@ -10,8 +10,8 @@
 --section-y-sm:80px;         /* .section--sm, CTA banner */
 --section-header-gap:72px;   /* section header → content */
 --nav-height:120px;          /* fixed nav bar */
---logo-nav:96px;             /* logo height in the nav */
---logo-footer:88px;          /* logo height in the footer */
+--logo-nav:46px;             /* vector logo height in the nav (= the site's 96px padded PNG) */
+--logo-footer:42px;          /* vector logo height in the footer (= the site's 88px padded PNG) */
 
 /* radius — site :root */
 --radius-sm:4px;             /* buttons, inputs, pillars, social squares */

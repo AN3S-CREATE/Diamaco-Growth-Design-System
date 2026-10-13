@@ -6,7 +6,7 @@ export declare const NAV_LINKS: NavLink[];
  * Top navigation bar: logo, caps links with a red draw-in underline, small red CTA. Links collapse to a burger under 900px.
  */
 export interface SiteNavProps extends React.HTMLAttributes<HTMLElement> {
-  /** Path to assets/logos/diamaco-growth-logo.png relative to the page. Without it a caps text stand-in shows. */
+  /** Optional image path (use assets/logos/diamaco-growth-logo.svg). Without it the inline vector <Logo /> is used. */
   logoSrc?: string;
   /** Default NAV_LINKS. */
   links?: NavLink[];

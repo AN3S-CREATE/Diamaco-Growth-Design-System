@@ -19,10 +19,10 @@ function Demo() {
         <div className="body">
           <span className="q"><b>1.1</b>Which industry best describes your business?</span>
           <ChoiceGrid label="Industry" value={industry} onChange={setIndustry} options={[
-            { value: 'pro', emoji: '💼', title: 'Professional & Advisory', desc: 'Accounting, Legal, Consulting, Finance' },
-            { value: 'logistics', emoji: '🚚', title: 'Logistics & Fleet', desc: 'Transport, Courier, Supply Chain' },
-            { value: 'construction', emoji: '🏗️', title: 'Construction & Mining', desc: 'Contractors, Engineering, Industrial Supply' },
-            { value: 'retail', emoji: '🛍️', title: 'Retail & E-Commerce', desc: 'Wholesale, B2C/B2B Storefronts' },
+            { value: 'pro', icon: 'briefcase', title: 'Professional & Advisory', desc: 'Accounting, Legal, Consulting, Finance' },
+            { value: 'logistics', icon: 'truck', title: 'Logistics & Fleet', desc: 'Transport, Courier, Supply Chain' },
+            { value: 'construction', icon: 'hard-hat', title: 'Construction & Mining', desc: 'Contractors, Engineering, Industrial Supply' },
+            { value: 'retail', icon: 'shopping-bag', title: 'Retail & E-Commerce', desc: 'Wholesale, B2C/B2B Storefronts' },
           ]} />
           <span className="q mt"><b>1.2</b>Team size</span>
           <PillGroup label="Team size" value={size} onChange={setSize} options={['1 (Solo Founder)', '2 – 5 Staff', '6 – 15 Staff', '16 – 50 Staff', '50+ Enterprise']} />
